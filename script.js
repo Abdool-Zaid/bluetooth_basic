@@ -6,8 +6,8 @@ btn.addEventListener('click',()=>{
 
     
     
-    navigator.bluetooth.requestDevice({
-        filters: [{ services: ['battery_service'] }]
+    navigator.bluetooth.requestDevice({ acceptAllDevices:true
+        // filters: [{ services: ['battery_service'] }]
     })
   .then(device => {
         // Connect to the selected device
@@ -34,4 +34,15 @@ btn.addEventListener('click',()=>{
         console.error(error);
   });
   
+})
+
+// paired devices
+
+let pairedBTN= document.querySelector('#paired')
+pairedBTN.addEventListener('click',()=>{
+navigator.bluetooth.getAvailability()
+.then(res=>{
+    console.log(res)
+})
+
 })
