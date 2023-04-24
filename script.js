@@ -46,3 +46,7 @@ navigator.bluetooth.getAvailability()
 })
 
 })
+
+
+
+
