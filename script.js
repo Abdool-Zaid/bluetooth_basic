@@ -3,6 +3,9 @@ let btn = document.querySelector("#btn")
 btn.addEventListener('click', () => {
   navigator.bluetooth.requestDevice({
       acceptAllDevices: true
+      // filters: [{
+      //   services: ['bleService']
+      // }]
     })
     .then(device => {
       // Connect to the selected device
@@ -33,7 +36,3 @@ navigator.bluetooth.getAvailability()
 })
 
 })
-
-
-
-
